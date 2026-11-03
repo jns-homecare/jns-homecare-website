@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jns-homecare.github.io/jns-homecare-website/sitemap.xml
