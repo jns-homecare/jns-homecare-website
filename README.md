@@ -76,3 +76,8 @@ Do not upload only the ZIP file. `index.html` must remain at the repository root
 - Test every enquiry form, phone link, mobile page and internal link.
 - Add WhatsApp only after account verification.
 - Consider a custom domain after the brand name and public details are finalised.
+
+
+## Service image update
+
+The 24 individual services now use 24 distinct Pexels image IDs. The six homepage service cards and six category-page hero images are also distinct within their respective groups. All images are illustrative stock photographs, not JNS staff or patient photographs. See `photo-credits.html` for the source list.

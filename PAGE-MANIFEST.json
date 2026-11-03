@@ -4,7 +4,7 @@
   "public_contact": {
     "phone": "+91 6381121476",
     "email": "jnshomenursingservices@gmail.com",
-    "address": "10/1, Padmavathy Nagar, Second Cross Street, Korattur, Chennai, Tamil Nadu \u2013 600076"
+    "address": "10/1, Padmavathy Nagar, Second Cross Street, Korattur, Chennai, Tamil Nadu – 600076"
   },
   "language": "English",
   "theme": {
@@ -104,5 +104,103 @@
   "service_count": 24,
   "category_count": 6,
   "stock_photo_note": "Pexels images are illustrative and are not JNS staff, clients, or endorsements.",
-  "known_form_limit": "Email-draft forms only; no online database persistence or file upload."
+  "known_form_limit": "Email-draft forms only; no online database persistence or file upload.",
+  "service_photo_assignments": {
+    "tracheostomy-care.html": {
+      "pexels_photo_id": 20897585,
+      "description": "Respiratory-support patient image; not a tracheostomy procedure demonstration"
+    },
+    "ryle-s-tube-ng-tube-feeding.html": {
+      "pexels_photo_id": 23655818,
+      "description": "Medical equipment image; not a feeding-tube procedure demonstration"
+    },
+    "urinary-catheter-care.html": {
+      "pexels_photo_id": 35609692,
+      "description": "Medical professional handling catheter equipment"
+    },
+    "bedsore-dressing-care.html": {
+      "pexels_photo_id": 7723629,
+      "description": "Gloved hands preparing gauze dressing supplies"
+    },
+    "companionship.html": {
+      "pexels_photo_id": 29373893,
+      "description": "Older adult and caregiver sharing a conversation at home"
+    },
+    "night-time-patient-care.html": {
+      "pexels_photo_id": 6129685,
+      "description": "Care professional offering bedside reassurance"
+    },
+    "mobility-walking-assistance.html": {
+      "pexels_photo_id": 34328480,
+      "description": "Care professional supporting an older adult with mobility"
+    },
+    "feeding-assistance.html": {
+      "pexels_photo_id": 29372696,
+      "description": "Caregiver assisting an older adult at mealtime"
+    },
+    "diaper-changing-toileting-assistance.html": {
+      "pexels_photo_id": 7551684,
+      "description": "Illustrative personal-care support at home"
+    },
+    "bathing-personal-hygiene.html": {
+      "pexels_photo_id": 8307359,
+      "description": "Family hygiene routine image; not a clinical care demonstration"
+    },
+    "24-hour-care.html": {
+      "pexels_photo_id": 29372722,
+      "description": "Caregiver assisting a patient in bed"
+    },
+    "12-hour-care.html": {
+      "pexels_photo_id": 29372534,
+      "description": "Caregiver welcoming and supporting an older adult"
+    },
+    "patient-attender-services.html": {
+      "pexels_photo_id": 5875563,
+      "description": "Nurse providing bedside support"
+    },
+    "elderly-care.html": {
+      "pexels_photo_id": 29372724,
+      "description": "Caregiver offering reassurance to a senior adult"
+    },
+    "palliative-care.html": {
+      "pexels_photo_id": 6129440,
+      "description": "Comfort-focused patient and caregiver hand-holding"
+    },
+    "stroke-paralysis-care.html": {
+      "pexels_photo_id": 29372727,
+      "description": "Caregiver assisting an older adult with movement at home"
+    },
+    "post-operative-care.html": {
+      "pexels_photo_id": 20897577,
+      "description": "Patient recovery image after surgery"
+    },
+    "post-hospitalisation-care.html": {
+      "pexels_photo_id": 6129200,
+      "description": "Patient recovery and transition-from-hospital image"
+    },
+    "bedridden-patient-care.html": {
+      "pexels_photo_id": 6010783,
+      "description": "Patient resting in bed with respiratory support"
+    },
+    "home-nursing-care.html": {
+      "pexels_photo_id": 29372719,
+      "description": "Senior adult receiving support with mobility at home"
+    },
+    "medication-administration.html": {
+      "pexels_photo_id": 7551649,
+      "description": "Nurse explaining medication to an older adult"
+    },
+    "vital-signs-monitoring.html": {
+      "pexels_photo_id": 8089105,
+      "description": "Blood pressure monitoring at home"
+    },
+    "diabetic-patient-monitoring.html": {
+      "pexels_photo_id": 6823560,
+      "description": "Blood glucose monitoring image"
+    },
+    "wound-dressing-care.html": {
+      "pexels_photo_id": 18271866,
+      "description": "Illustrative wound-care stock image"
+    }
+  }
 }

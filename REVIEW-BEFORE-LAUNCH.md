@@ -41,3 +41,6 @@ Publish only facts JNS can substantiate.
 - [ ] Forms correctly open mailto drafts and do not claim to store submissions.
 - [ ] Mobile and desktop layouts are reviewed.
 - [ ] Add WhatsApp only after successful verification of the JNS business number.
+
+
+- Confirm that the Pexels images load on desktop and mobile, and retain the photo-credit disclosure. Check that the clinical-context images are illustrative only.
