@@ -1,17 +1,18 @@
-JNS PREMIUM WEBSITE V2 — GITHUB UPLOAD
+JNS PREMIUM WEBSITE V3 — CIRCULAR LOGO + GRAPHICS UPDATE
 
 Repository: https://github.com/jns-homecare/jns-homecare-website
 Expected Pages URL: https://jns-homecare.github.io/jns-homecare-website/
-Package contains 85 public HTML pages.
+Package contains 85 public HTML pages, the corrected circular JNS emblem, and refreshed styles.
 
-1. Extract this ZIP.
-2. Open the extracted JNS-Premium-Website-v2 folder.
-3. Select every item inside it, including index.html, all other .html files, assets, sitemap.xml, robots.txt and .nojekyll.
-4. Upload the contents (not the containing folder and not the ZIP itself) to the repository root.
-5. Replace the existing same-named files with the new v2 versions and add the new pages.
-6. Commit to main.
-7. Keep Settings > Pages > Deploy from a branch > main > /(root).
-8. Check Actions for a successful Pages deployment.
-9. Open the expected URL above.
+1. Keep your existing GitHub backup ZIP safely.
+2. Extract this V3 ZIP on your computer.
+3. Open the extracted folder and select every item inside it, including index.html, all other .html files, assets, sitemap.xml, robots.txt and .nojekyll.
+4. In the repository, choose Add file > Upload files.
+5. Upload the selected contents to the repository root (not the outer folder and not the ZIP itself).
+6. Replace existing same-named files when GitHub asks and add the new pages/assets.
+7. Commit to the main branch with message: "Refresh JNS circular gold logo and premium graphics".
+8. Keep Settings > Pages > Deploy from a branch > main > /(root).
+9. Wait until the Pages workflow in Actions shows success.
+10. Open https://jns-homecare.github.io/jns-homecare-website/ and hard-refresh with Ctrl+Shift+R to force the updated CSS/logo to load.
 
-Do not publish private registration or banking details. Read README.md and REVIEW-BEFORE-LAUNCH.md before launch.
+Do not delete the repository or main branch. Do not publish private registration, PAN or banking details. Read README.md and REVIEW-BEFORE-LAUNCH.md before launch.

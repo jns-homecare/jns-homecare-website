@@ -44,3 +44,10 @@ Publish only facts JNS can substantiate.
 
 
 - Confirm that the Pexels images load on desktop and mobile, and retain the photo-credit disclosure. Check that the clinical-context images are illustrative only.
+
+
+## Visual refresh checks
+
+- Confirm the circular JNS emblem renders as a perfect circle in header and footer.
+- Hard-refresh browser after deployment (Ctrl+Shift+R) to fetch `site.css?v=20261104b`.
+- Check desktop header, mobile menu, hero quick links, all service photos, and image credit labels.
