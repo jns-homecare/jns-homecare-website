@@ -1,0 +1,14 @@
+PHONE NUMBER – CHANGE LATER (DO NOT USE UNTIL NEW SIM IS ACTIVE)
+
+Current website number retained for now: +91 6381121476
+Current tel: link retained for now: tel:6381121476
+
+After JNS gets the new dedicated number:
+1. Confirm the new SIM can receive calls and SMS and is controlled by JNS.
+2. Back up WhatsApp Business before using Change Number.
+3. Replace the current number everywhere on all 85 HTML pages, plus JSON-LD structured data and manifest files.
+4. Replace all tel: links and floating call buttons.
+5. Update Google Business Profile and all social profiles.
+6. Test the new number from a separate phone.
+
+Never publish the new number before testing it.

@@ -1,0 +1,60 @@
+JNS WEBSITE – REMAINING LAUNCH TASKS
+======================================
+
+A. INCLUDED IN THIS UPDATE PACK
+-------------------------------
+[ ] Upload the six corrected category pages to the existing GitHub repository root.
+[ ] Confirm GitHub Pages deployment succeeds.
+[ ] Open all six category URLs and verify every service card photograph is distinct.
+[ ] Confirm the circular JNS logo appears in all six page headers and footers.
+[ ] Test mobile navigation and card layout on a phone.
+
+B. WEBSITE QA STILL TO COMPLETE
+-------------------------------
+[ ] Open every one of the 85 HTML pages and test navigation links.
+[ ] Test every phone and email link.
+[ ] Test the Request Care email-draft flow on desktop and mobile.
+[ ] Test the Job Application email-draft flow; verify an email draft opens and explain that applicants must attach their CV themselves.
+[ ] Check all Pexels images load on desktop/mobile and the photo-credit disclosure is visible.
+[ ] Review spelling, text overflow, mobile menu and footer on all pages.
+[ ] Confirm the exact office address and Google Maps pin match the official public business address.
+[ ] Confirm that every service listed on the website is genuinely available and appropriately staffed.
+[ ] Have a qualified clinical adviser review all clinical service descriptions and professional-scope wording.
+[ ] Have an auditor/legal adviser review Privacy Policy, Terms and Cancellation Policy for actual operating practices.
+
+C. ENQUIRY FUNCTIONALITY
+------------------------
+Current forms open a pre-filled email draft. There is no backend database, admin dashboard, automated booking system, or secure CV upload.
+Decide whether a secure enquiry system is needed. If implemented, collect only necessary details, use access controls, define retention/deletion procedures, and do not ask visitors to upload medical records to a public form.
+
+D. GOOGLE AND SEO
+-----------------
+[ ] Verify the domain/site in Google Search Console.
+[ ] Submit https://jns-homecare.github.io/jns-homecare-website/sitemap.xml.
+[ ] Inspect the homepage and key service URLs in Search Console.
+[ ] Fix any indexing, mobile usability, canonical or crawl errors that Google reports.
+[ ] Keep robots.txt and sitemap.xml in the repository root.
+[ ] Add the final website URL to the Google Business Profile after the website is approved for publication.
+[ ] Correct the Google Business Profile address/map pin if it does not match the registered/public office address.
+
+E. REAL-WORLD TRUST
+-------------------
+[ ] Upload actual JNS office photographs where appropriate.
+[ ] Add staff photos only with staff consent.
+[ ] Publish staff names/qualifications only after document verification and consent.
+[ ] Publish customer testimonials only when genuine and authorised for display.
+[ ] Do not publish invented nurse counts, client counts, years of experience, star ratings, certifications or guarantees.
+[ ] Confirm vacancy availability, salary, shifts, work location and employment conditions before advertising active openings.
+
+F. AFTER THE NEW BUSINESS SIM NUMBER IS READY
+---------------------------------------------
+[ ] Replace the current phone number across all website pages and structured data.
+[ ] Update tel: links and floating call buttons.
+[ ] Update Google Business Profile.
+[ ] Transfer WhatsApp Business using Settings > Account > Change number after backup and verification.
+[ ] Update Instagram, Facebook, X, YouTube and email signatures.
+[ ] Re-test every call/WhatsApp/contact link.
+
+G. ADVERTISING
+--------------
+Do not start paid advertising until the public contact number, website forms, service availability, address, customer response process and legal/clinical wording are confirmed.

@@ -1,0 +1,27 @@
+{
+  "repo": "jns-homecare/jns-homecare-website",
+  "target_branch": "main",
+  "upload_destination": "repository root",
+  "replacement_files": [
+    "skilled-home-nursing-care.html",
+    "wound-recovery-care.html",
+    "elderly-personal-care.html",
+    "bedridden-mobility-care.html",
+    "palliative-special-patient-care.html",
+    "home-nursing-attender-services.html"
+  ],
+  "service_card_count": 24,
+  "unique_pexels_photo_ids": 24,
+  "current_phone_kept_unchanged": "+91 6381121476",
+  "required_existing_assets": [
+    "assets/jns-emblem.webp",
+    "assets/favicon.webp",
+    "assets/site.css",
+    "assets/site.js"
+  ],
+  "notes": [
+    "Do not delete the other existing 79 HTML pages or existing repository assets.",
+    "All category page card images are different Pexels IDs.",
+    "Pexels imagery is illustrative stock photography, not JNS staff or clients."
+  ]
+}
