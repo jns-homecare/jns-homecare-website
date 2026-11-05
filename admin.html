@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#071b31">
+  <title>JNS Admin | Home Care and Nursing Services</title>
+  <link rel="icon" href="assets/favicon.webp?v=20261104b" type="image/webp">
+  <link rel="stylesheet" href="assets/site.css?v=20261104b">
+  <style>
+    .admin-wrap{max-width:1120px;margin:0 auto;padding:42px 20px 70px}
+    .admin-head{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:28px}
+    .admin-brand{display:flex;gap:14px;align-items:center}.admin-brand img{width:58px;height:58px;object-fit:contain}
+    .admin-brand strong{display:block;color:#f3e6c9;font-size:20px}.admin-brand span{display:block;color:#b6c2cf;font-size:13px;margin-top:3px}
+    .admin-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .admin-panel{background:#fff;border:1px solid #e3e8ef;border-radius:16px;padding:24px;box-shadow:0 10px 35px rgba(0,0,0,.08);color:#172a3e}
+    .admin-panel h1,.admin-panel h2{color:#102a43;margin-top:0}.admin-panel p{color:#526477}
+    .admin-login{max-width:470px;margin:30px auto}.admin-login .field{margin:14px 0}.admin-login input{width:100%;box-sizing:border-box}
+    .admin-note{padding:13px 15px;border-radius:10px;background:#f2f6fa;color:#30465b;margin:15px 0;font-size:14px}
+    .admin-status{min-height:24px;color:#243f59;font-size:14px;margin-top:12px}
+    .admin-tabs{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.admin-tabs button{border:1px solid #d6dee8;background:#fff;color:#1b3652;border-radius:30px;padding:10px 17px;cursor:pointer;font-weight:700}.admin-tabs button[aria-pressed="true"]{background:#102a43;color:#fff;border-color:#102a43}
+    .admin-list{display:grid;gap:14px}.admin-card{border:1px solid #dce4ec;border-radius:12px;padding:16px;background:#fff}.admin-card h3{margin:0 0 8px;color:#17314b}.admin-meta{display:flex;gap:10px;flex-wrap:wrap;color:#62748a;font-size:12px;margin:5px 0 10px}.admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px 18px}.admin-grid p{margin:5px 0;color:#293d52;overflow-wrap:anywhere}.admin-grid b{color:#607187;font-weight:700}.admin-card-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid #edf1f5}.admin-card select{padding:9px 11px;border:1px solid #ccd6e1;border-radius:8px;background:#fff;color:#142c44}.admin-empty{padding:24px;text-align:center;color:#5a6d80;background:#f7f9fb;border-radius:12px}.admin-hidden{display:none!important}
+    @media(max-width:640px){.admin-panel{padding:18px}.admin-wrap{padding:25px 13px 55px}.admin-head{align-items:flex-start}.admin-actions{width:100%}.admin-actions button{flex:1}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><div class="topmeta"><span>JNS internal access</span><span>Authorised administration only</span></div><span>JNS HOME CARE &amp; NURSING SERVICES</span></div></div>
+  <main class="admin-wrap">
+    <header class="admin-head">
+      <div class="admin-brand"><img src="assets/jns-emblem.webp?v=20261104b" alt="JNS emblem"><div><strong>JNS Admin</strong><span>Enquiries and recruitment applications</span></div></div>
+      <div class="admin-actions"><button class="btn btn-outline-light" id="refresh-button" type="button" disabled>Refresh records</button><button class="btn btn-gold admin-hidden" id="logout-button" type="button">Sign out</button></div>
+    </header>
+
+    <section class="admin-panel admin-login" id="login-panel">
+      <span class="kicker">RESTRICTED ACCESS</span>
+      <h1>Admin sign in</h1>
+      <p>Sign in using the JNS-authorised Supabase account. Access is checked again on the server for every admin action.</p>
+      <form id="login-form">
+        <div class="field"><label for="admin-email">Email address</label><input id="admin-email" type="email" autocomplete="username" required maxlength="254"></div>
+        <div class="field"><label for="admin-password">Password</label><input id="admin-password" type="password" autocomplete="current-password" required></div>
+        <button class="btn btn-gold" id="login-button" type="submit">Sign in →</button>
+        <p class="admin-status" id="login-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="admin-note">Only the authorised JNS email address can access submitted records. Do not share your password or one-time codes.</div>
+    </section>
+
+    <section class="admin-panel admin-hidden" id="dashboard-panel">
+      <div class="admin-head" style="margin-bottom:10px"><div><span class="kicker">PRIVATE WORKSPACE</span><h1 style="margin:6px 0">Submission inbox</h1><p id="signed-in-label" style="margin:0"></p></div></div>
+      <div class="admin-note">Treat all applicant and enquiry information as confidential. Do not copy records into public documents or share them outside authorised JNS staff.</div>
+      <div class="admin-tabs" role="group" aria-label="Submission type">
+        <button type="button" id="tab-enquiries" aria-pressed="true">Home-care enquiries (<span id="enquiry-count">0</span>)</button>
+        <button type="button" id="tab-applications" aria-pressed="false">Job applications (<span id="application-count">0</span>)</button>
+      </div>
+      <p class="admin-status" id="dashboard-status" role="status" aria-live="polite"></p>
+      <div class="admin-list" id="records-list"></div>
+    </section>
+  </main>
+  <script type="module" src="assets/jns-admin.js?v=20261105a"></script>
+</body>
+</html>
