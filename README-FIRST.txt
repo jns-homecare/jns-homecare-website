@@ -1,43 +1,58 @@
-JNS HOME CARE — SUPABASE WEBSITE INTEGRATION PACK
+JNS CUSTOM DOMAIN SEO MIGRATION PACK
+====================================
 
-This pack connects the home-care enquiry form and job application form to the new JNS Supabase backend and adds a small protected admin page.
+Primary domain:
+https://jnshomecareandnursingservices.in/
 
-FILES TO UPLOAD TO THE ROOT OF THE EXISTING GITHUB REPOSITORY
-- request-care.html
-- job-application.html
-- privacy-policy.html
-- admin.html
-- robots.txt
+WHAT THIS DOES
+--------------
+The PowerShell script updates:
+- Canonical URL tags on public HTML pages (all root .html files except admin.html)
+- Open Graph URL (og:url) on those pages
+- Old GitHub Pages absolute URLs in page HTML and homepage LocalBusiness JSON-LD
+- sitemap.xml to use the new custom domain; index.html is represented as /
+- robots.txt sitemap location
+- admin.html gets noindex,nofollow as an additional indexing safeguard
+- SEO-MIGRATION-RESULT.txt is generated with a quick audit
 
-FILES TO UPLOAD INTO THE EXISTING assets/ FOLDER
-- assets/jns-forms.js
-- assets/jns-admin.js
+BEFORE RUNNING
+--------------
+1. Open the JNS website repository:
+   https://github.com/jns-homecare/jns-homecare-website
+2. Download the repository ZIP from Code > Download ZIP.
+3. Extract the repository ZIP into a normal folder.
+4. Copy BOTH files from this pack into the extracted repository ROOT:
+   - Apply-JNS-SEO-Migration.ps1
+   - Run-JNS-SEO-Migration.bat
+   The root is the folder containing index.html, sitemap.xml and robots.txt.
+5. Double-click Run-JNS-SEO-Migration.bat.
+6. Wait for "JNS SEO migration finished."
+7. Open SEO-MIGRATION-RESULT.txt and confirm:
+   - HTML pages processed should be 85.
+   - Pages with one canonical tag should match the HTML pages processed.
+   - Old GitHub Pages references remaining in HTML should be 0.
+   - Sitemap URLs updated should be 85.
+
+UPLOAD TO GITHUB
+----------------
+1. Open https://github.com/jns-homecare/jns-homecare-website
+2. Click Add file > Upload files.
+3. Upload the changed root files:
+   - all modified public .html pages
+   - admin.html
+   - sitemap.xml
+   - robots.txt
+   - SEO-MIGRATION-RESULT.txt (optional audit report)
+4. Commit the upload to the main branch.
+5. Wait for the GitHub Pages deployment to complete successfully.
 
 IMPORTANT
-1. The Supabase publishable key included in the browser JavaScript is designed to be public. Do NOT add a database password, SUPABASE_SECRET_KEYS value, service_role key, or any other secret to these files.
-2. The GitHub Pages origin configured in the Edge Function is https://jns-homecare.github.io.
-3. The admin page is not linked from public navigation and is excluded from robots.txt. It is protected by Supabase Auth plus a server-side email allowlist; the URL itself is not a security boundary.
-4. Existing sitemap.xml should NOT include admin.html.
-5. The public forms collect only basic contact / service / recruitment details. They do not collect patient diagnoses, medical reports, prescriptions, identity documents, or CV uploads.
-
-UPLOAD STEPS
-A. Open https://github.com/jns-homecare/jns-homecare-website
-B. Click Add file > Upload files.
-C. Drag the five root files listed above into the upload area and commit them to main.
-D. Open the assets folder and upload jns-forms.js and jns-admin.js there; commit to main.
-E. Wait for the GitHub Pages workflow to finish, then test request-care.html and job-application.html from the published website.
-
-ADMIN ACCOUNT — REQUIRED MANUAL STEP
-The database allowlist is already seeded for jnshomenursingservices@gmail.com. Create the matching Auth user in Supabase Dashboard > Authentication > Users > Add user. Use that exact email and set your own strong password directly in Supabase. Do not send the password to ChatGPT or include it in GitHub files. Keep public sign-ups disabled unless there is a deliberate reason to enable them.
-Then open https://jns-homecare.github.io/jns-homecare-website/admin.html and sign in.
-
-POST-UPLOAD TESTS
-1. Submit a test home-care enquiry using your own test contact details.
-2. Sign in to admin.html and confirm the enquiry appears.
-3. Change the enquiry status and confirm it saves.
-4. Submit a test job application and confirm it appears in admin.html.
-5. Confirm a non-allowlisted Auth user cannot open admin records.
-6. Confirm no API secret/service-role key appears in browser source or GitHub.
-
-LEGAL / OPERATIONAL NOTE
-Before real use, JNS should have its legal/privacy adviser review this privacy notice, define a retention schedule, restrict internal admin access to authorised staff, and complete a browser test. The form integration is not a substitute for clinical, legal or privacy review.
+---------
+- Do not upload this pack's two script files unless you want to keep them in the repository.
+- Do not delete CNAME. It must continue to contain:
+  jnshomecareandnursingservices.in
+- Do not change BigRock nameservers or DNS records that are already working.
+- Do not add or delete email MX/TXT records.
+- Keep the admin page protected by Supabase authentication; noindex is not an access-control mechanism.
+- Canonical tags and sitemap help search engines understand the preferred domain; they do not guarantee rankings or immediate indexing.
+- Google Search Console verification and sitemap submission still need to be completed separately.
