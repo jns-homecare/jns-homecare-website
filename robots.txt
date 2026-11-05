@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
-Sitemap: https://jns-homecare.github.io/jns-homecare-website/sitemap.xml
+Sitemap: https://jnshomecareandnursingservices.in/sitemap.xml
