@@ -1,6 +1,6 @@
 # JNS Home Care and Nursing Services — Premium Website v2
 
-A static, responsive, English-language website package for JNS Home Care and Nursing Services.
+A responsive, English-language public website for JNS Home Care and Nursing Services, with Supabase-backed enquiry/recruitment forms and a protected JNS admin dashboard.
 
 ## Brand and contact details used
 
@@ -36,33 +36,31 @@ Clinical nursing roles are kept separate and require the appropriate recognised 
 
 Vacancy pages do not invent salary, opening count, shift guarantees or appointment promises. Confirm the actual position, location, hours, compensation and employment terms directly with JNS.
 
-## Important implementation limitations (please read)
+## Current implementation and remaining limitations (reviewed 6 November 2026)
 
-1. **Forms are email-draft forms only.** They open the visitor's email application with the form content prefilled. The visitor must review and send the email. The website does not currently save enquiries or applications in an online database.
-2. **No CV upload backend.** Candidates are asked to attach their CV manually in their email application.
-3. **No admin dashboard or staff/patient login is implemented.** Do not publish login links until a secure backend, authentication, access rules and testing are added.
-4. **WhatsApp is not connected.** A call and email path is provided. Add a WhatsApp link only after the JNS number is successfully verified and the business account is ready.
-5. **No false business metrics are used.** The site does not display an unverified count of 57 nurses, six happy customers, years of experience, customer ratings, certifications, patient testimonials or 24/7 guarantees. These can be added only after JNS confirms and documents the facts.
-6. **Stock photography is remote.** Selected illustrative photographs are loaded from Pexels. They are clearly labelled as stock and not JNS staff, clients or endorsements. A network connection is required to load them. See `photo-credits.html`.
-7. **Policies are drafts.** Privacy, terms, clinical disclaimer and cancellation wording must be reviewed by JNS's auditor/legal adviser and the relevant clinical adviser before final public launch.
-8. **Clinical content is informational only.** It does not teach clinical procedures or replace the treating professional's instructions.
+1. **Home-care enquiries are stored online.** The `request-care.html` form posts to the Supabase Edge Function `jns-api`; validated submissions are stored in `public.jns_enquiries`.
+2. **Recruitment applications are stored online.** The `job-application.html` form posts candidate details to the same Edge Function and stores them in `public.jns_job_applications`. The application form does not upload CVs, certificates or other files.
+3. **Protected admin dashboard is implemented.** `admin.html` uses Supabase Auth and the server checks the signed-in email against the active JNS admin allowlist on every admin action. The page is marked `noindex,nofollow`; do not remove that directive or expose secret/service-role keys in browser code.
+4. **Database access is server-mediated.** The four JNS public-schema tables have RLS enabled. Direct `anon` and `authenticated` table grants are absent; the Edge Function uses its server-side admin client after validating the request and, for admin actions, the allowlist. Do not add public table policies or grants without a reviewed access design.
+5. **CORS origins are restricted.** The active `jns-api` function allows the GitHub Pages origin, the apex domain, the `www` domain and local development origins. Function version 4 was verified active on 6 November 2026.
+6. **Candidate CV handling is separate.** Applicants should only send a CV if JNS requests it through an official channel; confirm the request before sharing documents. Never request passwords, OTPs, bank details or unnecessary identity documents at the first application stage.
+7. **WhatsApp is a contact preference, not an API integration.** The enquiry form allows a visitor to select WhatsApp as their preferred contact method. No WhatsApp Business API or automated messaging integration is documented here; follow-up must be handled by JNS through its approved business channel.
+8. **No false business metrics are used.** The site does not display an unverified count of 57 nurses, six happy customers, years of experience, customer ratings, certifications, patient testimonials or 24/7 guarantees. Add such claims only after JNS confirms and documents the facts.
+9. **Stock photography is remote.** Selected illustrative photographs are loaded from Pexels. They are labelled as stock and do not depict JNS staff or clients. See `photo-credits.html`; use real JNS images only with appropriate consent and permission.
+10. **Policies are not legally approved.** Privacy, recruitment privacy, terms, clinical disclaimer and cancellation wording remain drafts pending JNS management decisions and appropriate legal/privacy and clinical review. In particular, JNS must approve retention periods and actual cancellation/refund terms.
+11. **Clinical content is informational only.** It does not teach clinical procedures or replace the treating professional's instructions.
+12. **Search indexing is not guaranteed.** JNS previously reported that Search Console ownership was verified, the sitemap submitted, 85 URLs discovered and six URL indexing requests submitted. Discovery or submission does not mean that Google has indexed those pages; check the live Search Console property for current status.
 
-## Publish to the existing GitHub Pages repository
+## Current GitHub Pages deployment
 
 Repository: https://github.com/jns-homecare/jns-homecare-website
 
-1. Extract `JNS-Premium-Website-v2.zip` on your computer.
-2. Open the extracted `JNS-Premium-Website-v2` folder.
-3. Select **all contents inside that folder** (not the outer folder and not the ZIP itself).
-4. In the GitHub repository, choose **Add file → Upload files**.
-5. Upload all files and folders, keeping the `assets` folder and its subfolders in the repository root.
-6. Replace existing same-named files with the V3 versions and add the new pages.
-7. Commit the upload to the `main` branch.
-8. Keep GitHub Pages set to **Deploy from a branch → main → /(root)**.
-9. Check the Actions tab for a successful Pages deployment.
-10. Open: https://jns-homecare.github.io/jns-homecare-website/
+- Primary public URL: https://jnshomecareandnursingservices.in/
+- `www` URL: https://www.jnshomecareandnursingservices.in/ (DNS CNAME points to `jns-homecare.github.io`; GitHub Pages redirects to the configured apex domain).
+- Custom-domain `CNAME` file: `jnshomecareandnursingservices.in`.
+- Repository default branch: `main`; the website files live at the repository root.
 
-Do not upload only the ZIP file. `index.html` must remain at the repository root.
+For a targeted website change, edit and commit only the affected files to `main`. Do not re-upload an old website ZIP over the live repository. Keep Settings → Pages configured for the existing root-site deployment. After committing, check the repository's deployment status in GitHub and verify the changed page on the public custom domain. Do not remove or replace the `CNAME`, DNS records or existing assets as part of an unrelated content edit. `index.html` must remain at the repository root.
 
 ## Final pre-launch checks
 
@@ -89,3 +87,10 @@ The 24 individual services now use 24 distinct Pexels image IDs. The six homepag
 - Header and footer logo styling is constrained to a fixed square frame so it cannot expand the layout.
 - CSS and JS URLs include a version query parameter to avoid stale browser/CDN styling after deployment.
 - Homepage hero now includes a compact quick-services panel, enhanced framing, gold accent rules and upgraded card styling.
+
+
+## Backend and privacy correction release (6 November 2026)
+
+- Candidate application pages and the main privacy policy were corrected to describe the live Supabase form storage and anti-spam hash processing.
+- Recruitment application details are stored in the JNS database; no CV/document upload is provided by the online form.
+- The current live website still requires owner-approved data-retention terms and legal/privacy review before the policy notices can be treated as final.
