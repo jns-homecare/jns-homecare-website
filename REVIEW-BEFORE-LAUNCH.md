@@ -30,15 +30,19 @@ Publish only facts JNS can substantiate.
 ## Clinical and privacy review
 - [ ] Clinical adviser reviews service descriptions and role-boundary wording.
 - [ ] Auditor/legal adviser reviews privacy, terms and cancellation policies.
-- [ ] Determine whether online form storage is required; if yes, implement a secure backend with access controls, retention and appropriate notices.
+- [x] Supabase-backed enquiry and recruitment forms are implemented with server-side validation, RLS-enabled tables, no direct public table grants and authenticated allowlisted admin actions.
+- [ ] JNS management must approve record-retention periods for enquiries and applications and confirm an operational deletion/anonymisation process.
+- [ ] Legal/privacy adviser must review the notices against the actual data flows, including form fields, Mumbai-region hosting, technical logs and hashed network identifiers.
 - [ ] Confirm consent and privacy safeguards before publishing any real staff or patient photos.
 - [ ] Confirm any third-party services (Google Fonts, Pexels) are acceptable.
 
 ## Technical checks
-- [ ] GitHub Pages deployment succeeds.
+- [ ] Confirm GitHub Pages deployment succeeds for the latest main-branch commit and the updated policy/recruitment pages are live on the custom domain.
 - [ ] All internal links work.
 - [ ] Phone and email links work.
-- [ ] Forms correctly open mailto drafts and do not claim to store submissions.
+- [ ] Re-test the home-care enquiry form and candidate application form on the custom domain after the latest deployment; verify correct success/error messages and that no duplicate records are created.
+- [ ] Confirm both form types save only the stated fields, require consent, reject invalid values and do not upload CVs or sensitive documents.
+- [ ] Confirm admin sign-in, allowlist enforcement, listing and status updates using an authorised JNS admin account; never use real patient data for tests.
 - [ ] Mobile and desktop layouts are reviewed.
 - [ ] Add WhatsApp only after successful verification of the JNS business number.
 
@@ -51,3 +55,15 @@ Publish only facts JNS can substantiate.
 - Confirm the circular JNS emblem renders as a perfect circle in header and footer.
 - Hard-refresh browser after deployment (Ctrl+Shift+R) to fetch `site.css?v=20261104b`.
 - Check desktop header, mobile menu, hero quick links, all service photos, and image credit labels.
+
+
+## Current verified technical state (6 November 2026)
+- [x] GitHub owner account `jns-homecare` is connected with repository push access.
+- [x] Main privacy, recruitment privacy, careers and how-to-apply content corrections were committed to `main`.
+- [x] BigRock `www` CNAME record was confirmed by the business owner in browser; owner verified the redirect works.
+- [x] Supabase Edge Function `jns-api` version 4 is active; custom-domain CORS test returned a readable response with no browser CORS error.
+- [x] Four database migrations applied; performance and health advisors returned no findings.
+- [ ] Confirm deployment of the latest content commits on the public custom domain.
+- [ ] Confirm authenticated form submission after v4 using a safe business-approved test or first real enquiry; do not insert fake candidate/patient data.
+- [ ] Legal/privacy and clinical approvals remain open.
+- [ ] Supabase leaked-password protection is unavailable on the current Free plan; it is a Pro-and-above feature.
