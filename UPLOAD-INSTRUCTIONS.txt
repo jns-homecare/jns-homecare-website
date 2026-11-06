@@ -1,18 +1,47 @@
-JNS PREMIUM WEBSITE V3 — CIRCULAR LOGO + GRAPHICS UPDATE
+JNS HOME CARE AND NURSING SERVICES — CURRENT WEBSITE MAINTENANCE NOTES
+Last reviewed: 6 November 2026
 
 Repository: https://github.com/jns-homecare/jns-homecare-website
-Expected Pages URL: https://jns-homecare.github.io/jns-homecare-website/
-Package contains 85 public HTML pages, the corrected circular JNS emblem, and refreshed styles.
+Primary public website: https://jnshomecareandnursingservices.in/
+WWW address: https://www.jnshomecareandnursingservices.in/
+Custom-domain CNAME file: jnshomecareandnursingservices.in
 
-1. Keep your existing GitHub backup ZIP safely.
-2. Extract this V3 ZIP on your computer.
-3. Open the extracted folder and select every item inside it, including index.html, all other .html files, assets, sitemap.xml, robots.txt and .nojekyll.
-4. In the repository, choose Add file > Upload files.
-5. Upload the selected contents to the repository root (not the outer folder and not the ZIP itself).
-6. Replace existing same-named files when GitHub asks and add the new pages/assets.
-7. Commit to the main branch with message: "Refresh JNS circular gold logo and premium graphics".
-8. Keep Settings > Pages > Deploy from a branch > main > /(root).
-9. Wait until the Pages workflow in Actions shows success.
-10. Open https://jns-homecare.github.io/jns-homecare-website/ and hard-refresh with Ctrl+Shift+R to force the updated CSS/logo to load.
+CURRENT STRUCTURE
+- Website files and index.html live at the repository root.
+- Default branch: main.
+- GitHub Pages serves the root of main on the configured custom domain.
+- The www CNAME at BigRock targets jns-homecare.github.io. The owner confirmed the www-to-apex redirect works.
+- The website uses a Supabase Edge Function (jns-api) for home-care enquiries and job applications.
+- Admin dashboard: /admin.html. It is protected by Supabase Auth and an active email allowlist; keep noindex,nofollow.
+- Online candidate application form does not upload a CV or certificates.
+- Do not add a Supabase secret/service-role key to browser files.
 
-Do not delete the repository or main branch. Do not publish private registration, PAN or banking details. Read README.md and REVIEW-BEFORE-LAUNCH.md before launch.
+SAFE UPDATE PROCEDURE
+1. Open https://github.com/jns-homecare/jns-homecare-website while signed in as the JNS owner account.
+2. For a small text/content fix, edit only the affected existing file(s); do not upload an old ZIP over the current site.
+3. Preserve assets/, CNAME, sitemap.xml, robots.txt, .nojekyll, index.html and all existing public pages unless the change specifically requires a reviewed update.
+4. Commit changes to main with a clear message.
+5. Check GitHub Pages deployment status and wait for a successful deployment result.
+6. Open the changed page on https://jnshomecareandnursingservices.in/ in an Incognito window and confirm the updated content, canonical URL, links and layout.
+7. If a form or admin-related file changes, re-test CORS, consent, validation, authenticated admin access and database writes without using real patient information as test data.
+
+DO NOT CHANGE WITHOUT EXPLICIT OWNER APPROVAL
+- Public phone number: +91 6381121476.
+- Public email: jnshomenursingservices@gmail.com.
+- Office address or Google Maps red pin.
+- Careers/Vacancy visibility.
+- Existing enquiry/application records or admin allowlist.
+- DNS apex A records or nameservers.
+- Supabase RLS, table grants, service-role/secret keys, or Edge Function authorisation model.
+- Pricing, care packages or recruitment terms; these are outside the current approved scope.
+
+OPEN BUSINESS / APPROVAL ITEMS
+- Legal/privacy adviser review of Privacy Policy, Recruitment Privacy Notice and Terms.
+- JNS management approval of actual data-retention schedule and operational deletion process.
+- JNS management/legal review of actual cancellation notice, fees, rescheduling and refund terms.
+- Clinical adviser review of clinical disclaimer and service scope/role boundaries.
+- Genuine office/staff photographs and documented permission/consent.
+- Supabase Pro upgrade if JNS chooses to enable leaked-password protection (Free plan does not include it).
+- Current Google Search Console indexing status review; sitemap discovery is not proof of indexing.
+
+Never publish a policy as legally approved until the required owner and professional reviews are complete.
