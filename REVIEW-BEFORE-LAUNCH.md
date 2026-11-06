@@ -29,9 +29,10 @@ Publish only facts JNS can substantiate.
 
 ## Clinical and privacy review
 - [ ] Clinical adviser reviews service descriptions and role-boundary wording.
-- [ ] Auditor/legal adviser reviews privacy, terms and cancellation policies.
+- [ ] Auditor/legal adviser reviews privacy, terms and cancellation policies. Operational defaults are now approved by JNS management; professional sign-off remains open.
 - [x] Supabase-backed enquiry and recruitment forms are implemented with server-side validation, RLS-enabled tables, no direct public table grants and authenticated allowlisted admin actions.
-- [ ] JNS management must approve record-retention periods for enquiries and applications and confirm an operational deletion/anonymisation process.
+- [x] JNS management approved retention: closed enquiries 12 months after last status update; unsuccessful (`not_selected`) applications 6 months after last status update; rate-limit hashes 30 days.
+- [x] Supabase `pg_cron` daily retention cleanup is active at 02:15 UTC; its function is not executable by `anon` or `authenticated` roles.
 - [ ] Legal/privacy adviser must review the notices against the actual data flows, including form fields, Mumbai-region hosting, technical logs and hashed network identifiers.
 - [ ] Confirm consent and privacy safeguards before publishing any real staff or patient photos.
 - [ ] Confirm any third-party services (Google Fonts, Pexels) are acceptable.
@@ -65,5 +66,7 @@ Publish only facts JNS can substantiate.
 - [x] Four database migrations applied; performance and health advisors returned no findings.
 - [ ] Confirm deployment of the latest content commits on the public custom domain.
 - [ ] Confirm authenticated form submission after v4 using a safe business-approved test or first real enquiry; do not insert fake candidate/patient data.
-- [ ] Legal/privacy and clinical approvals remain open.
+- [ ] Legal/privacy and clinical approvals remain open; do not mark the pages professionally approved until signed off.
+- [x] Terms and Cancellation pages updated with 24-hour standard notice, no standard cancellation fee, availability-based rescheduling and written disclosure of any agreed exception.
+- [x] Privacy and Recruitment Privacy pages updated to match the scheduled retention cleanup.
 - [ ] Supabase leaked-password protection is unavailable on the current Free plan; it is a Pro-and-above feature.
