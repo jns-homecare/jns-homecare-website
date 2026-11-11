@@ -1,14 +1,22 @@
-PHONE NUMBER UPDATE – COMPLETED 11 NOVEMBER 2026
+JNS CONTACT NUMBER UPDATE — 11 NOVEMBER 2026
 
-Official JNS contact number: +91 91235 99678
-Official tel: link: tel:+919123599678
+Official JNS public contact number:
++91 91235 99678
 
-Completed website update checklist:
-1. Confirm the new SIM can receive calls and SMS and is controlled by JNS.
-2. Back up WhatsApp Business before using Change Number.
-3. Replace the current number everywhere on all 85 HTML pages, plus JSON-LD structured data and manifest files.
-4. Replace all tel: links and floating call buttons.
-5. Update Google Business Profile and all social profiles.
-6. Test the new number from a separate phone.
+JNS confirmed that the new SIM is active and is the single contact number to use.
 
-Never publish the new number before testing it.
+COMPLETED IN WEBSITE SOURCE
+- Updated all 85 public HTML pages.
+- Updated visible contact text, tel: links, call buttons and page metadata.
+- Updated the homepage LocalBusiness JSON-LD telephone.
+- Updated README and website upload notes.
+- GitHub Pages deployment #59 completed successfully for commit 97f0faae81fdc94c16d1916942e0e24fb8de402d.
+
+EXTERNAL PROFILE UPDATES STILL TO COMPLETE
+1. Google Business Profile: replace the pending old phone entry with +91 91235 99678 and wait for Google's review.
+2. Instagram: update/remove any older launch content that displays the previous contact number; use the corrected JNS poster.
+3. X: publish corrected contact details; remove or replace older content that displays the previous contact number if desired.
+4. Confirm the WhatsApp Business account is registered to this number. Back up chats before using Change Number if migrating an existing account.
+5. Test an incoming call and WhatsApp message from a separate phone.
+
+Use only +91 91235 99678 for all new JNS materials and public contact references.
