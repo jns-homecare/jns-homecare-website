@@ -5,7 +5,7 @@ A responsive, English-language public website for JNS Home Care and Nursing Serv
 ## Brand and contact details used
 
 - Business name: **JNS Home Care and Nursing Services**
-- Public phone: **+91 6381121476**
+- Public phone: **+91 91235 99678**
 - Public email: **jnshomenursingservices@gmail.com**
 - Office: **10/1, Padmavathy Nagar, Second Cross Street, Korattur, Chennai, Tamil Nadu – 600076**
 - Service location statement: Korattur, Chennai. Nearby-location availability must be confirmed individually.

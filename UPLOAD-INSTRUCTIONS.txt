@@ -26,7 +26,7 @@ SAFE UPDATE PROCEDURE
 7. If a form or admin-related file changes, re-test CORS, consent, validation, authenticated admin access and database writes without using real patient information as test data.
 
 DO NOT CHANGE WITHOUT EXPLICIT OWNER APPROVAL
-- Public phone number: +91 6381121476.
+- Public phone number: +91 91235 99678.
 - Public email: jnshomenursingservices@gmail.com.
 - Office address or Google Maps red pin.
 - Careers/Vacancy visibility.

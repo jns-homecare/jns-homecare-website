@@ -1,9 +1,9 @@
-PHONE NUMBER – CHANGE LATER (DO NOT USE UNTIL NEW SIM IS ACTIVE)
+PHONE NUMBER UPDATE – COMPLETED 11 NOVEMBER 2026
 
-Current website number retained for now: +91 6381121476
-Current tel: link retained for now: tel:6381121476
+Official JNS contact number: +91 91235 99678
+Official tel: link: tel:+919123599678
 
-After JNS gets the new dedicated number:
+Completed website update checklist:
 1. Confirm the new SIM can receive calls and SMS and is controlled by JNS.
 2. Back up WhatsApp Business before using Change Number.
 3. Replace the current number everywhere on all 85 HTML pages, plus JSON-LD structured data and manifest files.
