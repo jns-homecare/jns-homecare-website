@@ -1,60 +1,91 @@
-JNS WEBSITE – REMAINING LAUNCH TASKS
-======================================
+JNS HOME CARE AND NURSING SERVICES — MASTER LAUNCH CHECKLIST
+Updated: 11 November 2026
+Official public contact: +91 91235 99678
+Website: https://jnshomecareandnursingservices.in/
 
-A. INCLUDED IN THIS UPDATE PACK
--------------------------------
-[ ] Upload the six corrected category pages to the existing GitHub repository root.
-[ ] Confirm GitHub Pages deployment succeeds.
-[ ] Open all six category URLs and verify every service card photograph is distinct.
-[ ] Confirm the circular JNS logo appears in all six page headers and footers.
-[ ] Test mobile navigation and card layout on a phone.
+A. WEBSITE AND RELEASE
+----------------------
+[DONE] Custom-domain website live.
+[DONE] Site-wide public phone-number update across 85 HTML pages.
+[DONE] Phone-number rollout deployed successfully (GitHub Pages deployment #59).
+[DONE] Sitemap lastmod updated for all 85 URLs and deployed successfully (#61).
+[DONE] Homepage, Contact and Request Care pages use the new contact number.
+[DONE] Direct WhatsApp links added to homepage, Contact and Request Care pages for +91 91235 99678.
+[DONE] All 85 public HTML URLs audited: HTTP 200, indexable, self-canonical, no noindex.
+[DONE] SEO audit found zero critical, high or medium severity issues; remaining findings are low severity.
+[PENDING] Human visual QA on desktop and actual Android/iPhone screens.
+[PENDING] Tap-test phone, WhatsApp, email and navigation links on a real device.
+[PENDING] Review minor SEO polish (image alt text, long/short metadata, structured data where relevant).
 
-B. WEBSITE QA STILL TO COMPLETE
--------------------------------
-[ ] Open every one of the 85 HTML pages and test navigation links.
-[ ] Test every phone and email link.
-[ ] Test the Request Care email-draft flow on desktop and mobile.
-[ ] Test the Job Application email-draft flow; verify an email draft opens and explain that applicants must attach their CV themselves.
-[ ] Check all Pexels images load on desktop/mobile and the photo-credit disclosure is visible.
-[ ] Review spelling, text overflow, mobile menu and footer on all pages.
-[ ] Confirm the exact office address and Google Maps pin match the official public business address.
-[ ] Confirm that every service listed on the website is genuinely available and appropriately staffed.
-[ ] Have a qualified clinical adviser review all clinical service descriptions and professional-scope wording.
-[ ] Have an auditor/legal adviser review Privacy Policy, Terms and Cancellation Policy for actual operating practices.
+B. FORMS AND BACKEND
+--------------------
+[DONE] Request Care form is wired to the Supabase jns-api Edge Function.
+[DONE] Job Application form is wired to the same active Edge Function (version 4).
+[DONE] Frontend field names and server-side validation payloads match.
+[DONE] Enquiry and job-application tables have Row Level Security enabled.
+[DONE] Direct public table policies are absent; browser submissions go through the Edge Function.
+[DONE] Function checks allowed origins, consent, honeypot, field validation and per-IP rate limiting.
+[VERIFIED] Database currently contains 0 enquiries and 0 job applications; 1 active admin allowlist entry.
+[PENDING] End-to-end test submission with JNS approval, verify record in admin dashboard, then delete test record.
+[PENDING] Assign a person to monitor new enquiries and applications; define response SLA.
+[PENDING] Confirm notification workflow. Current Edge Function stores submissions; no outbound email/WhatsApp notification was verified in this review.
+[NOTE] Job Application form does not upload CV files. Tell applicants how to send a CV separately if required.
+[NOTE] Do not collect Aadhaar/PAN copies, bank details or sensitive medical documents through a public form.
 
-C. ENQUIRY FUNCTIONALITY
+C. GOOGLE SEARCH AND SEO
 ------------------------
-Current forms open a pre-filled email draft. There is no backend database, admin dashboard, automated booking system, or secure CV upload.
-Decide whether a secure enquiry system is needed. If implemented, collect only necessary details, use access controls, define retention/deletion procedures, and do not ask visitors to upload medical records to a public form.
+[DONE] Google Search Console domain property connected.
+[DONE] Sitemap https://jnshomecareandnursingservices.in/sitemap.xml submitted and downloaded by Google.
+[DONE] Sitemap contains 85 URLs, zero warnings and zero errors on the latest check.
+[DONE] All 85 sitemap URLs include lastmod.
+[DONE] All 85 public pages passed technical indexability audit.
+[DONE] Manual indexing requests accepted for 17 priority URLs on 11 November 2026.
+[PENDING] Manual indexing quota was exceeded on 11 November; continue eligible remaining URLs after Google's quota resets.
+[PENDING] Google must crawl and make its own indexing decision. Latest tracker snapshot: 5 indexed, 80 not indexed, 0 errors, 0 warnings.
+[PENDING] Recheck indexing tracker after Google recrawls and confirm actual indexed count; accepted requests do not guarantee indexing.
 
-D. GOOGLE AND SEO
------------------
-[ ] Verify the domain/site in Google Search Console.
-[ ] Submit https://jns-homecare.github.io/jns-homecare-website/sitemap.xml.
-[ ] Inspect the homepage and key service URLs in Search Console.
-[ ] Fix any indexing, mobile usability, canonical or crawl errors that Google reports.
-[ ] Keep robots.txt and sitemap.xml in the repository root.
-[ ] Add the final website URL to the Google Business Profile after the website is approved for publication.
-[ ] Correct the Google Business Profile address/map pin if it does not match the registered/public office address.
+D. GOOGLE BUSINESS PROFILE
+--------------------------
+[USER CONFIRMED] Existing JNS Business Profile is managed by the JNS account.
+[USER CONFIRMED] Opening hours are set to 24 hours, seven days a week.
+[USER CONFIRMED] Public street address is hidden for the home-service model; service areas retained.
+[USER CONFIRMED] User entered +91 91235 99678 in the profile.
+[PENDING] Verify Google approved the phone edit and the public listing now displays +91 91235 99678.
+[PENDING] Check business description, primary category, service list, logo and photos are accurate.
+[NOTE] Keep the Korattur office address on file, but do not expose it publicly while the business operates as a service-area business with no customer walk-ins.
 
-E. REAL-WORLD TRUST
--------------------
-[ ] Upload actual JNS office photographs where appropriate.
-[ ] Add staff photos only with staff consent.
-[ ] Publish staff names/qualifications only after document verification and consent.
-[ ] Publish customer testimonials only when genuine and authorised for display.
-[ ] Do not publish invented nurse counts, client counts, years of experience, star ratings, certifications or guarantees.
-[ ] Confirm vacancy availability, salary, shifts, work location and employment conditions before advertising active openings.
+E. SOCIAL MEDIA
+---------------
+[DONE] Instagram, Facebook and X connections are present in the publishing profile.
+[VERIFIED] Instagram handle observed: @jns_home.care.
+[VERIFIED] X handle observed: @JNS_HomeCare.
+[VERIFIED] Facebook account is connected; no recent Facebook posts were returned in the connected-media check.
+[USER CONFIRMED] New SIM and WhatsApp Business number are active: +91 91235 99678.
+[PENDING] Check Instagram and X profile names, bios, website links and contact options.
+[PENDING] Old Instagram and X launch posts still show +91 6381121476; user asked to handle post changes last.
+[PENDING] Replace/update old posts or publish corrections with official JNS logo and new contact number.
+[PENDING] Facebook page details and first branded post; owner deferred Facebook work until later.
+[REQUIREMENT] Every new branded JNS poster must include the official JNS logo.
 
-F. AFTER THE NEW BUSINESS SIM NUMBER IS READY
----------------------------------------------
-[ ] Replace the current phone number across all website pages and structured data.
-[ ] Update tel: links and floating call buttons.
-[ ] Update Google Business Profile.
-[ ] Transfer WhatsApp Business using Settings > Account > Change number after backup and verification.
-[ ] Update Instagram, Facebook, X, YouTube and email signatures.
-[ ] Re-test every call/WhatsApp/contact link.
+F. LEGAL, CLINICAL AND OPERATIONAL READINESS
+-------------------------------------------
+[PENDING] Auditor/legal adviser review of applicable registrations, business terms, privacy notice and cancellation policy.
+[PENDING] Qualified clinical professional review of nursing/procedure service descriptions and scope-of-practice wording.
+[PENDING] Verify each nurse/attender's identity, qualification, applicable registration, experience and references before assigning work.
+[PENDING] Confirm actual service availability, staffing, on-call backup and shift coverage before advertising.
+[PENDING] Finalise rate card, quotations, payment receipts, service agreement and cancellation/refund process.
+[PENDING] Finalise patient/family consent, visit notes, handover, incident escalation and complaint-handling SOPs.
+[PENDING] Define access control, retention period and deletion process for patient and candidate data.
+[PENDING] Verify each vacancy's role, pay, location, shift and employment terms before publishing.
+[PENDING] Use only genuine staff/customer photographs and testimonials with documented consent.
 
-G. ADVERTISING
---------------
-Do not start paid advertising until the public contact number, website forms, service availability, address, customer response process and legal/clinical wording are confirmed.
+G. FINAL CUSTOMER-READY TEST
+----------------------------
+[PENDING] Make one approved test enquiry and one approved job application; verify admin receives them and delete test records afterwards.
+[PENDING] Call +91 91235 99678 from another phone.
+[PENDING] Send a WhatsApp message to +91 91235 99678 from another phone.
+[PENDING] Open site on mobile and tap every contact action.
+[PENDING] Confirm Google public listing shows the approved number and right service area.
+[PENDING] After the above pass, publish corrected Instagram/X/Facebook launch content.
+
+Completion rule: do not mark the overall business launch 100% complete until live form tests, public Google phone verification, legal/clinical review, staffing checks and the final social launch have been verified.
