@@ -1,8 +1,8 @@
 {
   "brand": "JNS Home Care and Nursing Services",
-  "base_url": "https://jns-homecare.github.io/jns-homecare-website/",
+  "base_url": "https://jnshomecareandnursingservices.in/",
   "public_contact": {
-    "phone": "+91 6381121476",
+    "phone": "+91 91235 99678",
     "email": "jnshomenursingservices@gmail.com",
     "address": "10/1, Padmavathy Nagar, Second Cross Street, Korattur, Chennai, Tamil Nadu – 600076"
   },
@@ -104,7 +104,7 @@
   "service_count": 24,
   "category_count": 6,
   "stock_photo_note": "Pexels images are illustrative and are not JNS staff, clients, or endorsements.",
-  "known_form_limit": "Email-draft forms only; no online database persistence or file upload.",
+  "known_form_limit": "Home-care enquiries and recruitment applications are submitted to the Supabase-backed JNS API and stored online; CV and document uploads are not supported by the forms.",
   "service_photo_assignments": {
     "tracheostomy-care.html": {
       "pexels_photo_id": 20897585,
@@ -202,5 +202,6 @@
       "pexels_photo_id": 18271866,
       "description": "Illustrative wound-care stock image"
     }
-  }
+  },
+  "last_verified": "2026-11-13"
 }
