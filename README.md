@@ -95,3 +95,10 @@ The 24 individual services now use 24 distinct Pexels image IDs. The six homepag
 - Recruitment application details are stored in the JNS database; no CV/document upload is provided by the online form.
 - JNS management approved the operational retention and cancellation defaults. A daily `pg_cron` job (`jns-data-retention-daily`, 02:15 UTC) applies the retention schedule; its security-definer function is executable only by `postgres`, not public or authenticated users.
 - Privacy, recruitment privacy, cancellation and terms pages now state the current operational rules. Professional legal/privacy and clinical review is still required before any page is represented as legally or clinically approved.
+
+
+## Public contact number rollout (11 November 2026)
+
+The official JNS public contact number is **+91 91235 99678**. The 85 public HTML pages, page metadata, telephone links, homepage LocalBusiness structured data and direct WhatsApp links were updated in the 11 November rollout. Use this number on all newly issued brochures, visiting cards, policies, advertisements and social posts. Retire older materials showing +91 63811 21476. Before paid advertising, confirm an inbound call and WhatsApp message on the official SIM and update Google Business Profile and external social profiles.
+
+The machine-readable `PAGE-MANIFEST.json` is maintained separately from this README and should reflect the canonical custom domain, current contact details and Supabase-backed form implementation.
