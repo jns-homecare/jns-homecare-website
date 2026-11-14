@@ -1,18 +1,3 @@
-// Google Tag Manager container for the public JNS website.
-(() => {
-  const containerId = "GTM-WGM8VXCD";
-  if (window.__JNS_GTM_LOADED__) return;
-  window.__JNS_GTM_LOADED__ = true;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-  window.gtag("js", new Date());
-  const tag = document.createElement("script");
-  tag.async = true;
-  tag.src = "https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(containerId);
-  (document.head || document.documentElement).appendChild(tag);
-})();
-
-
 document.addEventListener('DOMContentLoaded',()=>{
  const menu=document.querySelector('.menu'),nav=document.querySelector('.nav');
  if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});}
