@@ -72,6 +72,11 @@
       if (!response.ok || result.ok !== true) {
         throw new Error(result.error || "We could not submit the form. Please call or email JNS.");
       }
+      // Send only a generic success event to Tag Manager. Never send enquiry fields or patient details.
+      if (kind === "enquiry") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "jns_enquiry_success" });
+      }
       if (status) status.textContent = result.message || "Thank you. JNS has received your submission.";
       form.reset();
     } catch (error) {
